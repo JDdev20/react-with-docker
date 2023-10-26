@@ -1,0 +1,17 @@
+# Usa una imagen de Node.js como base
+FROM node:lts-alpine
+
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Copia los archivos de configuración de la aplicación
+COPY package*.json ./
+
+# Instala las dependencias
+RUN npm install
+
+# Copia el resto de los archivos
+COPY . .
+
+# Comando para iniciar la aplicación en modo desarrollo con Vite
+CMD ["npm", "run", "dev"]

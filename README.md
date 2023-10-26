@@ -11,3 +11,7 @@ Currently, two official plugins are available:
 docker build -t my-react-app .
 
 docker run -d -p 80:80 my-react-app
+
+<!-- docker-compose down -->
+
+<!-- docker-compose up --build -->
